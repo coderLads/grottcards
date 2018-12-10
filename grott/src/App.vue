@@ -1,8 +1,27 @@
 <template>
   <div id="app">
+    <Navbar :user-icon="userIcon"/>
     <router-view/>
   </div>
 </template>
+
+<script>
+import Navbar from "./components/Navbar.vue";
+import Api from "@/Api";
+
+export default {
+  name: "app",
+  components: {
+    Navbar
+  },
+  props: {
+    userIcon: String
+  },
+  created() {
+    this.userIcon = Api.getUserImage(0);
+  }
+};
+</script>
 
 <style>
 body,
