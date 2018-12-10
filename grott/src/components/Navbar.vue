@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
-    <a href="index.html">
+    <router-link to="/">
       <img src="../assets/logo.png">
-    </a>
+    </router-link>
     <input type="text" id="search" placeholder="Search for sets">
     <div id="user-icon" @click="userMenu()">
       <img class="user-icon" :src="userIcon">
@@ -12,21 +12,19 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   props: {
     userIcon: String
   },
-  methods:{
-    userMenu(){
-     
-    }
+  methods: {
+    userMenu() {}
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.navbar{
+.navbar {
   height: 35px;
   background: rgba(255, 255, 255, 0.5);
   display: flex;
@@ -34,18 +32,18 @@ export default {
   padding: 5px 0px;
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
 }
-.navbar>*{
+.navbar > * {
   margin: 0px 5px;
 }
 
-img{
+img {
   height: 35px;
   width: auto;
 }
-.user-icon{
+.user-icon {
   border-radius: 50%;
 }
-input{
+input {
   border-radius: 50px;
   border: none;
   padding: 0px 20px;
