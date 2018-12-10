@@ -19,9 +19,12 @@ export default {
   data:()=>{
     return {
       cardData: [
-        {deckId:0,deckName:"Weeb Shit",cardCount:5},
-        {deckId:1,deckName:"Russian",cardCount:30},
-        {deckId:3,deckName:"German",cardCount:20}
+        {deckId:0,mastery:10,deckName:"Weeb Shit",cardCount:5},
+        {deckId:1,mastery:10,deckName:"Russian",cardCount:30},
+        {deckId:2,mastery:10,deckName:"Black",cardCount:69},
+        {deckId:3,mastery:10,deckName:"German",cardCount:20},
+        {deckId:4,mastery:10,deckName:"Chinese",cardCount:100},
+        {deckId:5,mastery:10,deckName:"Martian",cardCount:20}
       ]
     }
   }
@@ -35,6 +38,6 @@ body,html{
   padding: 0;
   height: 100%;
   width: 100%;
-  background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );
+  background-image: radial-gradient( circle farthest-corner at 0.3% 1.3%,  rgba(235,217,221,1) 0%, rgba(216,174,211,1) 45.1%, rgba(145,130,196,1) 100.2% );
 }
 </style>

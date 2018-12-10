@@ -28,14 +28,11 @@ export default {
 <style scoped>
 .navbar{
   height: 35px;
-  background: lightblue;
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: space-between;
   padding: 5px 0px;
-  border-bottom: 1px solid cadetblue;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
-  -box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
 }
 .navbar>*{
   margin: 0px 5px;
@@ -50,8 +47,8 @@ img{
 }
 input{
   border-radius: 50px;
-  border: 1px solid blue;
-  padding: 0px 10px;
-  height: 30px;
+  border: none;
+  padding: 0px 20px;
+  height: 100%;
 }
 </style>
