@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     id: Number,
     name: String,
     image: String,
@@ -8,4 +8,4 @@ var UserSchema = new mongoose.Schema({
     trackedDecks: Array
 });
 
-module.exports = mongoose.model('User', UserSchema );
+module.exports = mongoose.model('User', UserSchema);

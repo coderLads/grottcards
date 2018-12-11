@@ -5,25 +5,25 @@ const mongoose = require('mongoose');
 const app = express();
 
 // import models
-var Deck = require('./models/Deck');
-var User = require('./models/User');
+const Deck = require('./models/Deck');
+const User = require('./models/User');
 
 // setup db connection
-var mongoDB = 'mongodb://localhost:27017/card_app';
+const mongoDB = 'mongodb://localhost:27017/card_app';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // setup express connection
 app.use(express.static('public'));
 app.use(cors());
-var port = 9090;
+const port = 9090;
 
 // path for requesting decks of cards
 app.get("/getUserCards", (req, res) => {
-    Deck.find({}, function(err, decks) {
-        if(err) {
+    Deck.find({}, function (err, decks) {
+        if (err) {
             console.log(err);
         } else {
             res.send(decks);
@@ -32,8 +32,10 @@ app.get("/getUserCards", (req, res) => {
 });
 
 app.get("/getUserInfo", (req, res) => {
-    User.find({id:req.query.id}, function(err, userInfo) {
-        if(err) {
+    User.find({
+        id: req.query.id
+    }, function (err, userInfo) {
+        if (err) {
             console.log(err);
         } else {
             res.send(userInfo);
@@ -44,7 +46,7 @@ app.get("/getUserInfo", (req, res) => {
 app.listen(port, () => console.log(`Listening on ${port}`));
 
 
-// var testUser = new User({
+// let testUser = new User({
 //     id: 0,
 //     name: "ms grott",
 //     image: "https://i.imgur.com/WnmUCm7.png",
@@ -68,7 +70,7 @@ app.listen(port, () => console.log(`Listening on ${port}`));
 // });
 
 
-// var testCard = new Card({
+// let testCard = new Card({
 //     front: "grotted",
 //     back: "ya yeet",
 //     id: 001
@@ -134,6 +136,3 @@ app.listen(port, () => console.log(`Listening on ${port}`));
 //         }
 //     });
 // });
-
-
-
