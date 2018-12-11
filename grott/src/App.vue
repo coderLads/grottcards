@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <Navbar :user-icon="userInfo.image"/>
-    <router-view/>
+    <transition name="slide">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+import Navbar from "@/components/Navbar.vue";
 import Api from "@/Api";
 
 export default {
@@ -16,12 +18,13 @@ export default {
   },
   data() {
     return {
-      userInfo: Array,
-      userId: 0
-    }
+      userInfo: Array
+    };
   },
   created() {
-    Api.getUserInfo(this.userId).then(response => this.userInfo = Array.from(response.data)[0]);
+    Api.getUserInfo(this.userId).then(
+      response => (this.userInfo = Array.from(response.data)[0])
+    );
   }
 };
 </script>
