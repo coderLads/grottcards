@@ -16,17 +16,11 @@ export default {
   data() {
     return {
       loading: true,
-      cardData: Array
+      cardData: []
     };
   },
   created() {
-    this.cardData = Api.getUserCards();
-    //   .then(response => {
-    //     this.photos = response.data;
-    //   })
-    //   .catch(() => {
-    //     alert("ERROR");
-    //   });
+    Api.getUserCards().then(response => this.cardData = Array.from(response.data));
   }
 };
 </script>

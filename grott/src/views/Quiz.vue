@@ -31,7 +31,7 @@ export default {
   margin-top: 30px;
   text-align: center;
   display: grid;
-  grid-template-rows: 100px 30px 40px;
+  grid-template-rows: 100px 30px 50px;
 }
 #quiz-title {
   font-size: 50px;
@@ -47,7 +47,7 @@ export default {
   display: flex;
   justify-content: space-around;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 #mode-selector > * {

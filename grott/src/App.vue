@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar :user-icon="userIcon"/>
+    <Navbar :user-icon="userInfo.image"/>
     <router-view/>
   </div>
 </template>
@@ -14,11 +14,14 @@ export default {
   components: {
     Navbar
   },
-  props: {
-    userIcon: String
+  data() {
+    return {
+      userInfo: Array,
+      userId: 0
+    }
   },
   created() {
-    this.userIcon = Api.getUserImage(0);
+    Api.getUserInfo(this.userId).then(response => this.userInfo = Array.from(response.data)[0]);
   }
 };
 </script>
