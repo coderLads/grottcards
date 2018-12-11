@@ -20,7 +20,9 @@ export default {
     };
   },
   created() {
-    Api.getUserCards().then(response => this.cardData = Array.from(response.data));
+    Api.getUserCards().then(
+      response => (this.cardData = Array.from(response.data))
+    );
   }
 };
 </script>

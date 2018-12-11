@@ -33,10 +33,12 @@ export default {
   display: grid;
   grid-template-rows: 100px 30px 50px;
 }
+
 #quiz-title {
   font-size: 50px;
   line-height: 100px;
 }
+
 #quiz-stats {
   display: flex;
   justify-content: space-around;
