@@ -12,10 +12,11 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: "TheNavbar",
   props: {
     userIcon: String
   },
+
   methods: {
     userMenu() {}
   }

@@ -18,6 +18,7 @@
 <script>
 export default {
   name: "quiz",
+
   components: {}
 };
 </script>

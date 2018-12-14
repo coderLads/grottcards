@@ -15,7 +15,8 @@
 
 <script>
 export default {
-  name: "Cards",
+  name: "DeckDisplay",
+
   props: {
     decks: Array
   }

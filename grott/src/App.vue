@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar :user-icon="userInfo.image"/>
+    <the-navbar :user-icon="userInfo.image"/>
     <transition name="slide">
       <router-view/>
     </transition>
@@ -8,19 +8,21 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
+import TheNavbar from "@/components/TheNavbar.vue";
 import Api from "@/Api";
 
 export default {
   name: "app",
   components: {
-    Navbar
+    TheNavbar
   },
+
   data() {
     return {
       userInfo: Array
     };
   },
+
   created() {
     Api.getUserInfo(this.userId).then(
       response => (this.userInfo = Array.from(response.data)[0])
