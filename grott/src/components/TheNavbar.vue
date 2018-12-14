@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <router-link to="/">
-      <img src="../assets/logo.png">
+      <img src="@/assets/logo.png">
     </router-link>
     <input type="text" id="search" placeholder="Search for sets">
     <div id="user-icon" @click="userMenu()">
